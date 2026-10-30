@@ -1,5 +1,5 @@
 import { plotStateCache } from '../stateCache';
-import { RenderNode } from '@tracereactive/types';
+import { RenderNode } from '@gravitydock/types';
 import { PlotCategory } from '../categories';
 import { createChartFrame, closeChartFrame } from '../svg/frame';
 import { interpolateColor, hexToRgb } from '../svg/colors';
@@ -28,13 +28,13 @@ export class HeatmapDataNode extends RenderNode {
         { name: 'aspectRatio', label: 'Aspect Ratio', type: 'number' as const, defaultValue: 1.0 },
         
         { name: 'colorLow', label: 'Low Value Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: '#f8f9fa' }, // Off-white
-        { name: 'colorHigh', label: 'High Value Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotPrimaryColor' },
+        { name: 'colorHigh', label: 'High Value Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotPrimaryColor' },
         
-        { name: 'plotBackgroundColor', label: 'Background', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotBackgroundColor' },
-        { name: 'plotAxisColor', label: 'Label color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotAxisColor' },
-        { name: 'plotFontFamily', label: 'Font family', type: 'style' as const, styleType: 'font' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotFontFamily' },
-        { name: 'plotFontSize', label: 'Font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotFontSize' },
-        { name: 'plotTitleFontSize', label: 'Title font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotTitleFontSize' }
+        { name: 'plotBackgroundColor', label: 'Background', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotBackgroundColor' },
+        { name: 'plotAxisColor', label: 'Label color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotAxisColor' },
+        { name: 'plotFontFamily', label: 'Font family', type: 'style' as const, styleType: 'font' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotFontFamily' },
+        { name: 'plotFontSize', label: 'Font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotFontSize' },
+        { name: 'plotTitleFontSize', label: 'Title font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotTitleFontSize' }
     ];
 
     async evaluate(inputs: Record<string, any>, properties: Record<string, any>): Promise<Record<string, any>> {

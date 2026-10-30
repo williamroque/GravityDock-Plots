@@ -1,5 +1,5 @@
 import { plotStateCache } from '../stateCache';
-import { RenderNode } from '@tracereactive/types';
+import { RenderNode } from '@gravitydock/types';
 import { PlotCategory } from '../categories';
 import { chartStyleProperties, chartAxisProperties, chartLabelProperties, chartLegendProperties, getColumnData, createDomainMetadata  } from '../helpers';
 import { linearScale, categoricalScale, computeNiceDomain, getTickValues, getAutoTickSpacing } from '../svg/scales';
@@ -31,7 +31,7 @@ export class AreaChartNode extends RenderNode {
         { name: 'opacity', label: 'Fill Opacity', type: 'number' as const, defaultValue: 0.3, step: 0.1, min: 0, max: 1 },
         { name: 'aspectRatio', label: 'Aspect Ratio', type: 'number' as const, defaultValue: 1.6 },
         ...chartStyleProperties,
-        { name: 'lineWidth', label: 'Line Width', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotAxisThickness' },
+        { name: 'lineWidth', label: 'Line Width', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotAxisThickness' },
         ...chartAxisProperties,
         ...chartLabelProperties,
         ...chartLegendProperties

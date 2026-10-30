@@ -1,5 +1,5 @@
 import { plotStateCache } from '../stateCache';
-import { RenderNode } from '@tracereactive/types';
+import { RenderNode } from '@gravitydock/types';
 import { PlotCategory } from '../categories';
 import { chartStyleProperties, chartAxisProperties, chartLabelProperties, chartLegendProperties, getColumnData, createDomainMetadata  } from '../helpers';
 import { linearScale, computeNiceDomain, getTickValues, getAutoTickSpacing } from '../svg/scales';

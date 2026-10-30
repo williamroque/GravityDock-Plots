@@ -1,44 +1,44 @@
-import type { ThemeSection } from '@tracereactive/types';
+import type { ThemeSection } from '@gravitydock/types';
 
 export const PlotThemeSections: ThemeSection[] = [
     {
         name: 'Plots: General',
-        packageId: 'com.tracereactive.plots',
+        packageId: 'com.gravitydock.plots',
         variables: [
-            { key: 'plotPrimaryColor', label: 'Primary color', type: 'color', defaultValue: '#77E4FF', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotSecondaryColor', label: 'Secondary color', type: 'color', defaultValue: '#3693AB', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotAxisColor', label: 'Axis color', type: 'color', defaultValue: '#666666', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotAxisThickness', label: 'Axis thickness', type: 'number', defaultValue: '1', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotGridColor', label: 'Grid color', type: 'color', defaultValue: '#333333', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotGridThickness', label: 'Grid thickness', type: 'number', defaultValue: '0.5', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotBackgroundColor', label: 'Background', type: 'color', defaultValue: '#00000000', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotBorderThickness', label: 'Border thickness', type: 'number', defaultValue: '0', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotBorderColor', label: 'Border color', type: 'color', defaultValue: '#000000', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotRangePadding', label: 'Range padding', type: 'number', defaultValue: '0.05', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotRefLineColor', label: 'Reference line color', type: 'color', defaultValue: '#ff6b6b', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotRefLineThickness', label: 'Reference line thickness', type: 'number', defaultValue: '2', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
+            { key: 'plotPrimaryColor', label: 'Primary color', type: 'color', defaultValue: '#77E4FF', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotSecondaryColor', label: 'Secondary color', type: 'color', defaultValue: '#3693AB', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotAxisColor', label: 'Axis color', type: 'color', defaultValue: '#666666', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotAxisThickness', label: 'Axis thickness', type: 'number', defaultValue: '1', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotGridColor', label: 'Grid color', type: 'color', defaultValue: '#333333', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotGridThickness', label: 'Grid thickness', type: 'number', defaultValue: '0.5', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotBackgroundColor', label: 'Background', type: 'color', defaultValue: '#00000000', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotBorderThickness', label: 'Border thickness', type: 'number', defaultValue: '0', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotBorderColor', label: 'Border color', type: 'color', defaultValue: '#000000', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotRangePadding', label: 'Range padding', type: 'number', defaultValue: '0.05', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotRefLineColor', label: 'Reference line color', type: 'color', defaultValue: '#ff6b6b', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotRefLineThickness', label: 'Reference line thickness', type: 'number', defaultValue: '2', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
             { 
                 key: 'plotFontFamily', 
                 label: 'Font family', 
                 type: 'font', 
                 defaultValue: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif', 
                 section: 'Plots: General',
-                packageId: 'com.tracereactive.plots'
+                packageId: 'com.gravitydock.plots'
             },
-            { key: 'plotFontSize', label: 'Font size', type: 'number', defaultValue: '11', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotTitleFontSize', label: 'Title font size', type: 'number', defaultValue: '14', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotLabelColor', label: 'Label color', type: 'color', defaultValue: '#999999', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotMarginTop', label: 'Margin top', type: 'number', defaultValue: '60', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotMarginRight', label: 'Margin right', type: 'number', defaultValue: '30', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotMarginBottom', label: 'Margin bottom', type: 'number', defaultValue: '60', section: 'Plots: General', packageId: 'com.tracereactive.plots' },
-            { key: 'plotMarginLeft', label: 'Margin left', type: 'number', defaultValue: '70', section: 'Plots: General', packageId: 'com.tracereactive.plots' }
+            { key: 'plotFontSize', label: 'Font size', type: 'number', defaultValue: '11', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotTitleFontSize', label: 'Title font size', type: 'number', defaultValue: '14', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotLabelColor', label: 'Label color', type: 'color', defaultValue: '#999999', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotMarginTop', label: 'Margin top', type: 'number', defaultValue: '60', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotMarginRight', label: 'Margin right', type: 'number', defaultValue: '30', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotMarginBottom', label: 'Margin bottom', type: 'number', defaultValue: '60', section: 'Plots: General', packageId: 'com.gravitydock.plots' },
+            { key: 'plotMarginLeft', label: 'Margin left', type: 'number', defaultValue: '70', section: 'Plots: General', packageId: 'com.gravitydock.plots' }
         ]
     },
     {
         name: 'Plots: Palette',
-        packageId: 'com.tracereactive.plots',
+        packageId: 'com.gravitydock.plots',
         variables: [
-            { key: 'plotPalette', label: 'Color Palette', type: 'palette', defaultValue: '#77E4FF,#ff6b6b,#51cf66,#ffd43b,#cc5de8,#ff922b', section: 'Plots: Palette', packageId: 'com.tracereactive.plots' }
+            { key: 'plotPalette', label: 'Color Palette', type: 'palette', defaultValue: '#77E4FF,#ff6b6b,#51cf66,#ffd43b,#cc5de8,#ff922b', section: 'Plots: Palette', packageId: 'com.gravitydock.plots' }
         ]
     }
 ];

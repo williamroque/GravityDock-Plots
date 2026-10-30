@@ -1,4 +1,4 @@
-import { RenderNode } from '@tracereactive/types';
+import { RenderNode } from '@gravitydock/types';
 import { PlotCategory } from '../categories';
 import { createChartFrame, closeChartFrame } from '../svg/frame';
 import { renderXAxis, renderYAxis } from '../svg/axes';
@@ -32,15 +32,15 @@ export class HeatmapExpressionNode extends RenderNode {
         { name: 'resolution', label: 'Resolution (NxN)', type: 'number' as const, defaultValue: 50, min: 2, max: 200 },
         { name: 'aspectRatio', label: 'Aspect Ratio', type: 'number' as const, defaultValue: 1.0 },
         
-        { name: 'colorLow', label: 'Low Value Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotBackgroundColor' },
-        { name: 'colorHigh', label: 'High Value Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotPrimaryColor' },
+        { name: 'colorLow', label: 'Low Value Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotBackgroundColor' },
+        { name: 'colorHigh', label: 'High Value Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotPrimaryColor' },
         
-        { name: 'plotBackgroundColor', label: 'Background', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotBackgroundColor' },
-        { name: 'plotAxisColor', label: 'Axis color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotAxisColor' },
-        { name: 'plotAxisThickness', label: 'Axis thickness', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotAxisThickness' },
-        { name: 'plotFontFamily', label: 'Font family', type: 'style' as const, styleType: 'font' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotFontFamily' },
-        { name: 'plotFontSize', label: 'Font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotFontSize' },
-        { name: 'plotTitleFontSize', label: 'Title font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotTitleFontSize' },
+        { name: 'plotBackgroundColor', label: 'Background', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotBackgroundColor' },
+        { name: 'plotAxisColor', label: 'Axis color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotAxisColor' },
+        { name: 'plotAxisThickness', label: 'Axis thickness', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotAxisThickness' },
+        { name: 'plotFontFamily', label: 'Font family', type: 'style' as const, styleType: 'font' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotFontFamily' },
+        { name: 'plotFontSize', label: 'Font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotFontSize' },
+        { name: 'plotTitleFontSize', label: 'Title font size', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotTitleFontSize' },
         ...chartAxisProperties,
         ...chartLabelProperties,
         ...chartLegendProperties

@@ -1,15 +1,15 @@
 {
-  "name": "@tracereactive/plots",
+  "name": "@gravitydock/plots",
   "version": "1.0.0",
-  "description": "TraceReactive Plots package",
+  "description": "Gravity Dock Plots package",
   "main": "dist/index.js",
   "scripts": {
     "build": "esbuild src/index.ts --bundle --outfile=dist/index.js --platform=browser",
-    "build:trpkg": "npm run build && node scripts/build-trpkg.js",
+    "build:gdpkg": "npm run build && node scripts/build-gdpkg.js",
     "dev": "npm run build -- --watch"
   },
   "devDependencies": {
-    "@tracereactive/types": "file:../types",
+    "@gravitydock/types": "file:../types",
     "adm-zip": "^0.5.10",
     "esbuild": "^0.25.0",
     "typescript": "^5.7.3"

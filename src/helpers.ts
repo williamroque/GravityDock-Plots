@@ -1,24 +1,24 @@
-import type { PropertyDefinition } from '@tracereactive/types';
+import type { PropertyDefinition } from '@gravitydock/types';
 
 export const chartStyleProperties: PropertyDefinition[] = [
-    { name: 'plotPrimaryColor', label: 'Primary color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotPrimaryColor' },
+    { name: 'plotPrimaryColor', label: 'Primary color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotPrimaryColor' },
     { name: 'plotSecondaryColor', label: 'Secondary color', type: 'style', styleType: 'color', category: 'style', defaultValue: '#FF6B6B' },
-    { name: 'plotAxisColor', label: 'Axis color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotAxisColor' },
-    { name: 'plotAxisThickness', label: 'Axis thickness', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotAxisThickness' },
-    { name: 'plotGridColor', label: 'Grid color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotGridColor' },
-    { name: 'plotGridThickness', label: 'Grid thickness', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotGridThickness' },
-    { name: 'plotBackgroundColor', label: 'Background', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotBackgroundColor' },
-    { name: 'plotBorderThickness', label: 'Border thickness', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotBorderThickness' },
-    { name: 'plotBorderColor', label: 'Border color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotBorderColor' },
-    { name: 'plotRangePadding', label: 'Range padding', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotRangePadding' },
-    { name: 'plotFontFamily', label: 'Font family', type: 'style', styleType: 'font', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotFontFamily' },
-    { name: 'plotFontSize', label: 'Font size', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotFontSize' },
-    { name: 'plotTitleFontSize', label: 'Title font size', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotTitleFontSize' },
-    { name: 'plotPalette', label: 'Color Palette', type: 'style', styleType: 'palette', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotPalette' },
-    { name: 'plotMarginTop', label: 'Margin Top', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotMarginTop' },
-    { name: 'plotMarginRight', label: 'Margin Right', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotMarginRight' },
-    { name: 'plotMarginBottom', label: 'Margin Bottom', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotMarginBottom' },
-    { name: 'plotMarginLeft', label: 'Margin Left', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.tracereactive.plots.plotMarginLeft' }
+    { name: 'plotAxisColor', label: 'Axis color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotAxisColor' },
+    { name: 'plotAxisThickness', label: 'Axis thickness', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotAxisThickness' },
+    { name: 'plotGridColor', label: 'Grid color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotGridColor' },
+    { name: 'plotGridThickness', label: 'Grid thickness', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotGridThickness' },
+    { name: 'plotBackgroundColor', label: 'Background', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotBackgroundColor' },
+    { name: 'plotBorderThickness', label: 'Border thickness', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotBorderThickness' },
+    { name: 'plotBorderColor', label: 'Border color', type: 'style', styleType: 'color', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotBorderColor' },
+    { name: 'plotRangePadding', label: 'Range padding', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotRangePadding' },
+    { name: 'plotFontFamily', label: 'Font family', type: 'style', styleType: 'font', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotFontFamily' },
+    { name: 'plotFontSize', label: 'Font size', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotFontSize' },
+    { name: 'plotTitleFontSize', label: 'Title font size', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotTitleFontSize' },
+    { name: 'plotPalette', label: 'Color Palette', type: 'style', styleType: 'palette', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotPalette' },
+    { name: 'plotMarginTop', label: 'Margin Top', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotMarginTop' },
+    { name: 'plotMarginRight', label: 'Margin Right', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotMarginRight' },
+    { name: 'plotMarginBottom', label: 'Margin Bottom', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotMarginBottom' },
+    { name: 'plotMarginLeft', label: 'Margin Left', type: 'style', styleType: 'size', category: 'style', defaultValue: 'theme:com.gravitydock.plots.plotMarginLeft' }
 ];
 
 export const chartAxisProperties: PropertyDefinition[] = [
@@ -68,8 +68,8 @@ export const chartLabelProperties: PropertyDefinition[] = [
     { name: "xLabel", label: "X Axis Label", type: "string", defaultValue: "" },
     { name: "yLabel", label: "Y Axis Label", type: "string", defaultValue: "" },
     { name: "showLabels", label: "Show Labels", type: "boolean", defaultValue: false },
-    { name: "labelColor", label: "Label Color", type: "style", styleType: "color", category: "style", defaultValue: "theme:com.tracereactive.plots.plotAxisColor" },
-    { name: "labelFontSize", label: "Label Font Size", type: "style", styleType: "size", category: "style", defaultValue: "theme:com.tracereactive.plots.plotFontSize" }
+    { name: "labelColor", label: "Label Color", type: "style", styleType: "color", category: "style", defaultValue: "theme:com.gravitydock.plots.plotAxisColor" },
+    { name: "labelFontSize", label: "Label Font Size", type: "style", styleType: "size", category: "style", defaultValue: "theme:com.gravitydock.plots.plotFontSize" }
 ];
 
 export const chartLegendProperties: PropertyDefinition[] = [
@@ -84,6 +84,6 @@ export const chartLegendProperties: PropertyDefinition[] = [
         { label: "Right", value: "right" },
         { label: "Left", value: "left" }
     ] },
-    { name: "legendBackgroundColor", label: "Legend Background", type: "style", styleType: "color", category: "style", defaultValue: "theme:com.tracereactive.plots.plotBackgroundColor" },
-    { name: "legendBorderColor", label: "Legend Border", type: "style", styleType: "color", category: "style", defaultValue: "theme:com.tracereactive.plots.plotAxisColor" }
+    { name: "legendBackgroundColor", label: "Legend Background", type: "style", styleType: "color", category: "style", defaultValue: "theme:com.gravitydock.plots.plotBackgroundColor" },
+    { name: "legendBorderColor", label: "Legend Border", type: "style", styleType: "color", category: "style", defaultValue: "theme:com.gravitydock.plots.plotAxisColor" }
 ];

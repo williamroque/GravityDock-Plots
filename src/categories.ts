@@ -1,7 +1,7 @@
-import type { NodeCategory } from '@tracereactive/types';
+import type { NodeCategory } from '@gravitydock/types';
 
 export const PlotCategory: NodeCategory = { 
     name: 'Chart (Plots)', 
     accent: 'teal-400', 
-    packageId: 'com.tracereactive.plots' 
+    packageId: 'com.gravitydock.plots' 
 };

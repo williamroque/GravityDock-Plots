@@ -1,4 +1,4 @@
-import type { TraceReactiveAPI } from '@tracereactive/types';
+import type { GravityDockAPI } from '@gravitydock/types';
 
 import { PlotThemeSections } from './themes';
 import { LinePlotNode } from './nodes/LinePlotNode';
@@ -17,7 +17,7 @@ import { QQPlotNode } from './nodes/QQPlotNode';
 import { ResidualPlotNode } from './nodes/ResidualPlotNode';
 import { ReferenceLineNode } from './nodes/ReferenceLineNode';
 
-declare const traceReactive: TraceReactiveAPI;
+declare const gravityDock: GravityDockAPI;
 
 const nodes = [
     new LinePlotNode(),
@@ -51,10 +51,10 @@ const serializableNodes = nodes.map(n => ({
     dynamicOutputs: n.dynamicOutputs
 }));
 
-traceReactive.registerNodes(serializableNodes);
-traceReactive.registerThemeSections(PlotThemeSections);
+gravityDock.registerNodes(serializableNodes);
+gravityDock.registerThemeSections(PlotThemeSections);
 
-traceReactive.onEvaluateNode(async ({ typeId, inputs, properties }) => {
+gravityDock.onEvaluateNode(async ({ typeId, inputs, properties }) => {
     const node = nodes.find(n => n.typeId === typeId);
     if (!node) {
         throw new Error(`Unknown node type: ${typeId}`);

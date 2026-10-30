@@ -1,5 +1,5 @@
 import { plotStateCache } from '../stateCache';
-import { RenderNode } from '@tracereactive/types';
+import { RenderNode } from '@gravitydock/types';
 import { PlotCategory } from '../categories';
 import { createDomainMetadata } from '../helpers';
 import { createChartFrame, closeChartFrame } from '../svg/frame';
@@ -21,8 +21,8 @@ export class ReferenceLineNode extends RenderNode {
         { name: 'axis', label: 'Axis', type: 'select' as const, options: [{ label: 'X Axis', value: 'x' }, { label: 'Y Axis', value: 'y' }], defaultValue: 'x' },
         { name: 'value', label: 'Value', type: 'number' as const, defaultValue: 0 },
         { name: 'lineStyle', label: 'Line Style', type: 'select' as const, options: [{ label: 'Solid', value: 'solid' }, { label: 'Dashed', value: 'dashed' }, { label: 'Dotted', value: 'dotted' }], defaultValue: 'dashed' },
-        { name: 'lineColor', label: 'Line Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotRefLineColor' },
-        { name: 'lineThickness', label: 'Line Thickness', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.tracereactive.plots.plotRefLineThickness' }
+        { name: 'lineColor', label: 'Line Color', type: 'style' as const, styleType: 'color' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotRefLineColor' },
+        { name: 'lineThickness', label: 'Line Thickness', type: 'style' as const, styleType: 'size' as const, category: 'style' as const, defaultValue: 'theme:com.gravitydock.plots.plotRefLineThickness' }
     ];
 
     async evaluate(inputs: Record<string, any>, properties: Record<string, any>): Promise<Record<string, any>> {
