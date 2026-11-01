@@ -1,12 +1,11 @@
 import { mathjax } from 'mathjax-full/js/mathjax.js';
 import { TeX } from 'mathjax-full/js/input/tex.js';
 import { SVG } from 'mathjax-full/js/output/svg.js';
-import { browserAdaptor } from 'mathjax-full/js/adaptors/browserAdaptor.js';
 import { RegisterHTMLHandler } from 'mathjax-full/js/handlers/html.js';
 import { AllPackages } from 'mathjax-full/js/input/tex/AllPackages.js';
 import { liteAdaptor } from 'mathjax-full/js/adaptors/liteAdaptor.js';
 
-const adaptor = typeof window !== 'undefined' ? browserAdaptor() : liteAdaptor();
+const adaptor = liteAdaptor();
 RegisterHTMLHandler(adaptor as any);
 
 const texInput = new TeX({ packages: AllPackages, inlineMath: [['$', '$']] });
