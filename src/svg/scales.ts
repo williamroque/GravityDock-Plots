@@ -27,7 +27,8 @@ export function computeNiceDomain(data: number[], paddingFactor: number = 0.05):
     
     // Very simple nice-ing for now
     const range = max - min;
-    const padding = range * paddingFactor;
+    const factor = (typeof paddingFactor === 'number' && !isNaN(paddingFactor)) ? paddingFactor : 0.05;
+    const padding = range * factor;
     return [min - padding, max + padding];
 }
 

@@ -31,7 +31,7 @@ export function renderLabel(text: string, x: number, y: number, options: LabelOp
     
     const fontSize = options.fontSize || 12;
     const color = options.color || '#000000';
-    const fontFamily = options.fontFamily || 'sans-serif';
+    const cleanFont = (options.fontFamily || 'sans-serif').replace(/["'&quot;]/g, '').trim();
     const align = options.align || 'middle';
     const rotation = options.rotation || 0;
     const baseline = options.baseline || 'auto';
@@ -64,7 +64,7 @@ export function renderLabel(text: string, x: number, y: number, options: LabelOp
             const totalLines = lines.length;
             const shiftY = baseline === 'middle' ? -((totalLines - 1) * 0.6) + 'em' : dy;
             
-            let svgText = `<text x="${x}" y="${y}" ${transformStr} fill="${color}" font-family="${fontFamily}" font-size="${fontSize}px" text-anchor="${textAnchor}" dominant-baseline="${baseline === 'auto' ? 'auto' : baseline}">`;
+            let svgText = `<text x="${x}" y="${y}" ${transformStr} fill="${color}" font-family="${cleanFont}" font-size="${fontSize}px" text-anchor="${textAnchor}" dominant-baseline="${baseline === 'auto' ? 'auto' : baseline}">`;
             lines.forEach((line, index) => {
                 const lineDy = index === 0 ? shiftY : '1.2em';
                 svgText += `<tspan x="${x}" dy="${lineDy}">${line}</tspan>`;
@@ -73,7 +73,7 @@ export function renderLabel(text: string, x: number, y: number, options: LabelOp
             return svgText;
         }
 
-        return `<text x="${x}" y="${y}" ${transformStr} fill="${color}" font-family="${fontFamily}" font-size="${fontSize}px" text-anchor="${textAnchor}" dominant-baseline="${baseline === 'auto' ? 'auto' : baseline}" dy="${dy}">${plainText}</text>`;
+        return `<text x="${x}" y="${y}" ${transformStr} fill="${color}" font-family="${cleanFont}" font-size="${fontSize}px" text-anchor="${textAnchor}" dominant-baseline="${baseline === 'auto' ? 'auto' : baseline}" dy="${dy}">${plainText}</text>`;
     }
     
     // Convert to a single TeX string

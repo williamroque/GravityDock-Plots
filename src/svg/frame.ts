@@ -36,8 +36,8 @@ export function createChartFrame(config: ChartFrameConfig, properties?: Record<s
     
     // Render the SVG with exact physical width/height and overflow visible so long text acts like standard html elements
     let svg = `<svg width="${totalW}" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" style="overflow: visible; max-width: 100%; max-height: 100%; object-fit: contain;" xmlns="http://www.w3.org/2000/svg">`;
-    if (config.backgroundColor && config.backgroundColor !== 'transparent' && config.backgroundColor !== 'rgba(0,0,0,0)' && config.backgroundColor !== '#00000000') {
-        svg += `<rect width="100%" height="100%" fill="${config.backgroundColor}" />`;
+    if (config.backgroundColor && config.backgroundColor !== 'transparent' && config.backgroundColor !== 'rgba(0,0,0,0)' && config.backgroundColor !== '#00000000' && !config.backgroundColor.startsWith('theme:')) {
+        svg += `<rect width="${totalW}" height="${totalH}" fill="${config.backgroundColor}" />`;
     }
     svg += `<g class="main-group" transform="translate(${margin.left},${margin.top})">`;
     
@@ -50,13 +50,15 @@ export function closeChartFrame(svg: string, title: string, frame: { totalW: num
     svg += `<!--OVERLAYS--></g>`;
     
     if (title) {
-        const safeFont = fontFamily.replace(/"/g, '&quot;');
+        const safeFont = (fontFamily || 'sans-serif').replace(/["'&quot;]/g, '').trim();
+        const safeAxisColor = (axisColor && !axisColor.startsWith('theme:')) ? axisColor : '#333333';
+        const safeFontSize = (!isNaN(Number(titleFontSize)) && Number(titleFontSize) > 0) ? Number(titleFontSize) : 14;
         const titleX = frame.margin.left + frame.innerW / 2;
         const titleY = frame.margin.top / 2;
         svg += renderLabel(title, titleX, titleY, {
-            color: axisColor,
+            color: safeAxisColor,
             fontFamily: safeFont,
-            fontSize: titleFontSize,
+            fontSize: safeFontSize,
             align: 'middle',
             baseline: 'middle'
         });

@@ -79,7 +79,8 @@ export class ExpressionPlotNode extends RenderNode {
         const totalW = 600;
         const totalH = totalW / aspectRatio;
         
-        const padding = Number(properties['plotRangePadding'] ?? 0.05);
+        const rawPadding = Number(properties['plotRangePadding']);
+        const padding = !isNaN(rawPadding) ? rawPadding : 0.05;
         const [xMin, xMax] = computeNiceDomain([startX, endX], padding);
         const [yMin, yMax] = computeNiceDomain(validY, padding);
         
@@ -141,8 +142,10 @@ export class ExpressionPlotNode extends RenderNode {
             });
         }
         
-        const lineWidth = Number(properties['lineWidth']) || 2;
-        const color = properties['plotPrimaryColor'] || '#77E4FF';
+        const rawWidth = Number(properties['lineWidth']);
+        const lineWidth = (!isNaN(rawWidth) && rawWidth > 0) ? rawWidth : 2;
+        const rawColor = properties['plotPrimaryColor'];
+        const color = (rawColor && typeof rawColor === 'string' && !rawColor.startsWith('theme:')) ? rawColor : '#77E4FF';
         
         svg += renderLinePath(xData, yData, xScale, yScale, color, lineWidth);
         

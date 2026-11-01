@@ -19,9 +19,12 @@ export interface AxisConfig {
 import { renderLabel } from './latex';
 
 export function renderXAxis(config: AxisConfig): string {
-    const safeFont = config.fontFamily.replace(/"/g, '&quot;');
-    let svg = `<g class="x-axis" transform="translate(0,${config.innerH})" font-family="${safeFont}" font-size="${config.fontSize}" fill="${config.axisColor}">`;
-    svg += `<line x1="0" y1="0" x2="${config.innerW}" y2="0" stroke="${config.axisColor}" stroke-width="${config.axisThickness}" />`;
+    const safeFont = (config.fontFamily || 'sans-serif').replace(/["'&quot;]/g, '').trim();
+    const axisColor = (config.axisColor && !config.axisColor.startsWith('theme:')) ? config.axisColor : '#666666';
+    const axisThickness = (!isNaN(Number(config.axisThickness)) && Number(config.axisThickness) > 0) ? Number(config.axisThickness) : 1;
+    const fontSize = (!isNaN(Number(config.fontSize)) && Number(config.fontSize) > 0) ? Number(config.fontSize) : 11;
+    let svg = `<g class="x-axis" transform="translate(0,${config.innerH})" font-family="${safeFont}" font-size="${fontSize}" fill="${axisColor}">`;
+    svg += `<line x1="0" y1="0" x2="${config.innerW}" y2="0" stroke="${axisColor}" stroke-width="${axisThickness}" />`;
     
     config.ticks.forEach(tick => {
         const xPos = config.scale(tick);
@@ -68,9 +71,12 @@ export function renderXAxis(config: AxisConfig): string {
 }
 
 export function renderYAxis(config: AxisConfig): string {
-    const safeFont = config.fontFamily.replace(/"/g, '&quot;');
-    let svg = `<g class="y-axis" font-family="${safeFont}" font-size="${config.fontSize}" fill="${config.axisColor}">`;
-    svg += `<line x1="0" y1="0" x2="0" y2="${config.innerH}" stroke="${config.axisColor}" stroke-width="${config.axisThickness}" />`;
+    const safeFont = (config.fontFamily || 'sans-serif').replace(/["'&quot;]/g, '').trim();
+    const axisColor = (config.axisColor && !config.axisColor.startsWith('theme:')) ? config.axisColor : '#666666';
+    const axisThickness = (!isNaN(Number(config.axisThickness)) && Number(config.axisThickness) > 0) ? Number(config.axisThickness) : 1;
+    const fontSize = (!isNaN(Number(config.fontSize)) && Number(config.fontSize) > 0) ? Number(config.fontSize) : 11;
+    let svg = `<g class="y-axis" font-family="${safeFont}" font-size="${fontSize}" fill="${axisColor}">`;
+    svg += `<line x1="0" y1="0" x2="0" y2="${config.innerH}" stroke="${axisColor}" stroke-width="${axisThickness}" />`;
     
     let maxTickChars = 0;
     
